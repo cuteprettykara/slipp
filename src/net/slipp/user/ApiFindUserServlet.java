@@ -31,10 +31,11 @@ public class ApiFindUserServlet extends HttpServlet {
 				return;
 			}
 			
-			final GsonBuilder builder = new GsonBuilder();
+/*			final GsonBuilder builder = new GsonBuilder();
 		    builder.excludeFieldsWithoutExposeAnnotation();
-		    final Gson gson = builder.create();
+		    final Gson gson = builder.create();*/
 		    
+			final Gson gson = new Gson();
 			String jsonData = gson.toJson(user);
 			resp.setContentType("application/json;charset=UTF-8");
 			

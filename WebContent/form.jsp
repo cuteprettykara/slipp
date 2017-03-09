@@ -26,8 +26,10 @@
 				</div>
 				
 				<c:set var="actionUrl" value="/users/create" />
+				<c:set var="buttonMessage" value="회원가입" />
 				<c:if test="${not empty user.userId}">
-				<c:set var="actionUrl" value="/users/update" />
+					<c:set var="actionUrl" value="/users/update" />
+					<c:set var="buttonMessage" value="개인정보 수정" />
 				</c:if>
 				
 				<form class="form-horizontal" action="${actionUrl}" method="post">
@@ -65,7 +67,9 @@
 					</div>
 					<div class="control-group">
 						<div class="controls">
-							<button type="submit" class="btn btn-primary">회원가입</button>
+							<button type="submit" class="btn btn-primary">
+								${buttonMessage}
+							</button>
 						</div>
 					</div>
 				</form>

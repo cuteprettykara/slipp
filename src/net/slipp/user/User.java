@@ -2,16 +2,25 @@ package net.slipp.user;
 
 import java.sql.SQLException;
 
-import com.google.gson.annotations.Expose;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
 
 public class User {
-	@Expose
+	@NotNull
+	@Size(min=4, max=12)
 	private String userId;
-	@Expose(serialize = false)
-	private String password;
-	@Expose
+	
+	@NotNull
+	@Size(min=4, max=10)
+	private transient String password;
+	
+	@NotNull
+	@Size(min=4, max=12)
 	private String name;
-	@Expose
+	
+	@Email
 	private String email;
 	
 	public User(String userId, String password, String name, String email) {
