@@ -10,7 +10,7 @@ public class UserDAO {
 
 	public Connection getConnection() {
 		String url = "jdbc:mysql://localhost:3306/slipp_dev";
-		String id = "root"; 
+		String id = "prettykara"; 
 		String pw = "1111"; 
 		
 		try {

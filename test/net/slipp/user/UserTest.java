@@ -7,7 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class UserTest {
-	public static User TEST_USER = new User("prettykara", "pppp", "prettykara", "prettykara@gmail.com");
+	public static User TEST_USER = new User("prettykara", "1111", "prettykara", "prettykara@gmail.com");
 	private UserDAO userDao;
 	
 	@Before
@@ -18,7 +18,7 @@ public class UserTest {
 
 	@Test
 	public void matchPassword() {
-		assertTrue(TEST_USER.matchPassword("pppp"));
+		assertTrue(TEST_USER.matchPassword("1111"));
 	}
 
 	@Test
