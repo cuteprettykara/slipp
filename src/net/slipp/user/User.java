@@ -13,11 +13,11 @@ public class User {
 	private String userId;
 	
 	@NotNull
-	@Size(min=4, max=10)
+	@Size(min=2, max=12)
 	private transient String password;
 	
 	@NotNull
-	@Size(min=4, max=12)
+	@Size(min=4, max=10)
 	private String name;
 	
 	@Email
