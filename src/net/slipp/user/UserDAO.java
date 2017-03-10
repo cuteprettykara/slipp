@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class UserDAO {
 
 	public Connection getConnection() {
-		String url = "jdbc:mysql://localhost:3306/slipp_dev";
+		String url = "jdbc:mysql://localhost:3306/slipp_dev?serveTimezone=UTC";
 		String id = "prettykara"; 
 		String pw = "1111"; 
 		
