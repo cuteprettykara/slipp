@@ -1,2 +1,7 @@
 /build/
 /tomcat.8080/
+/target/
+/.project
+/.settings/
+/.classpath
+/bin/
