@@ -16,14 +16,19 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
 import org.apache.commons.beanutils.BeanUtilsBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import net.slipp.support.MyValidatorFactory;
 
 @WebServlet("/users/update")
 public class UpdateUserServlet extends HttpServlet {
+	private static final Logger logger = LoggerFactory.getLogger(UpdateUserServlet.class);
+
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		HttpSession session = request.getSession();
 		String sessionUserId = SessionUtils.getStringValue(session, LoginServlet.SESSION_USER_ID);
 		if (sessionUserId == null) {
@@ -55,7 +60,7 @@ public class UpdateUserServlet extends HttpServlet {
 			return;
 		}
 		
-		
+		logger.debug("*** Save User : {}", user);
 		UserDAO userDAO = new UserDAO();
 		try {
 			userDAO.updateUser(user);
