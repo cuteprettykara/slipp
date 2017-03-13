@@ -91,6 +91,12 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -120,17 +126,10 @@
 					<downloadSources>true</downloadSources>
 				</configuration>
 			</plugin>
-			<!-- <plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>3.0.0</version>
-				<configuration>
-					<outputDirectory>${project.basedir}/webapp/WEB-INF/lib</outputDirectory>
-					<overWriteReleases>false</overWriteReleases>
-					<overWriteSnapshots>false</overWriteSnapshots>
-					<overWriteIfNewer>true</overWriteIfNewer>
-				</configuration>
-			</plugin> -->
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-dependency-plugin</artifactId> 
+				<version>3.0.0</version> <configuration> <outputDirectory>${project.basedir}/webapp/WEB-INF/lib</outputDirectory> 
+				<overWriteReleases>false</overWriteReleases> <overWriteSnapshots>false</overWriteSnapshots> 
+				<overWriteIfNewer>true</overWriteIfNewer> </configuration> </plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
